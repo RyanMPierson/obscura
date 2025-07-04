@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obscura</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>OBSCURA</h1>
+
+        <div class="panel">
+            <h2>Encrypt</h2>
+            <div class="passphrase-group">
+                <label for="encryptPass">Passphrase</label>
+                <div class="passphrase-toggle">
+                    <input type="password" id="encryptPass" />
+                    <label class="switch">
+                        <input type="checkbox" onchange="togglePassVisibility('encryptPass', this)">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <label for="encryptText">Plain Text</label>
+            <textarea id="encryptText" rows="4"></textarea>
+
+            <button onclick="encrypt()">Encrypt</button>
+            <label for="encryptedResult">Encrypted Output</label>
+            <textarea id="encryptedResult" rows="4" readonly></textarea>
+        </div>
+
+        <div class="panel">
+            <h2>Decrypt</h2>
+            <div class="passphrase-group">
+                <label for="decryptPass">Passphrase</label>
+                <div class="passphrase-toggle">
+                    <input type="password" id="decryptPass" />
+                    <label class="switch">
+                        <input type="checkbox" onchange="togglePassVisibility('decryptPass', this)">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <label for="decryptText">Encrypted Text</label>
+            <textarea id="decryptText" rows="4"></textarea>
+
+            <button onclick="decrypt()">Decrypt</button>
+            <label for="decryptedResult">Decrypted Output</label>
+            <textarea id="decryptedResult" rows="4" readonly></textarea>
+        </div>
+        <p style="margin-top: 2rem; font-size: 0.9rem; color: #666;">
+            Obscura uses AES-GCM (Advanced Encryption Standard in Galois/Counter Mode), a military-grade encryption standard widely adopted for securing sensitive data. Without the correct passphrase, it is virtually impossible to decrypt the message. AES-256 combined with a secure key derivation function like PBKDF2 and a unique salt (IV) ensures strong protection against brute-force attacks.
+        </p>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
