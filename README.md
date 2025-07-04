@@ -2,13 +2,15 @@
 
 **Obscura** is a simple and secure web-based encryption tool for encrypting and decrypting messages using AES-GCM. Built with HTML, CSS, and JavaScript, it enables users to securely encode text using a passphrase and decode it only with the correct key.
 
+[Live Demo](https://ryanmpierson.com/arcade/obscura)
+
 ## Features
 
-- 🔐 AES-256 GCM encryption in the browser
-- 🧠 Password-based key derivation using PBKDF2
-- 👁️ Toggle visibility for passphrases
-- 📱 Responsive and modern UI
-- 🧩 No backend required — everything runs client-side
+- AES-256 GCM encryption in the browser
+- Password-based key derivation using PBKDF2
+- Toggle visibility for passphrases
+- Responsive and modern UI
+- No backend required — everything runs client-side
 
 ## Getting Started
 
